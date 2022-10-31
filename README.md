@@ -41,5 +41,11 @@ DISTRIB_RELEASE=20.04
 DISTRIB_CODENAME=focal
 DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
 
+
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/eldaraydayev/energi3.git
+git push -u origin main
+
 . ./.env docker-compose exec /usr/local/bin/energi --datadir /home/nrgstaker/.energi_core attach
 docker-compose up --detach
