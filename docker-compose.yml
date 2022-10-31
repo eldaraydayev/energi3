@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  core:
+    build:
+      args:
+        ENERGI_BIN: "${ENERGI_BIN}"
+        ENERGI_CORE_DIR: "${ENERGI_CORE_DIR:?}"
+        ENERGI_VERSION: ${ENERGI_VERSION:?"}
+        STAKER_HOME: ${STAKER_HOME:?}
+      context: .
+    image: energi3
+    ports:
+      - 39797:39797/tcp
+      - 39797:39797/udp
+    restart: unless-stopped
+    volumes:
+      - target: "${ENERGI_CORE_DIR}"
+        type: volume
+        source: core-data
+
+volumes:
+  core-data:
