@@ -23,6 +23,7 @@ RUN addgroup --gid ${USER_AND_GROUP_ID} ${USERNAME} \
   chown -R ${USERNAME}:${USERNAME} ${STAKER_HOME}
 
 COPY --chown=${USERNAME}:${USERNAME} [ "energi-core-run.sh", "./" ]
+RUN chmod +x ./energi-core-run.sh
 
 USER ${USERNAME}
 
