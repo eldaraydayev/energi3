@@ -52,3 +52,5 @@ git clone https://github.com/eldaraydayev/energi3.git
 sudo docker build --tag energi3 .
 sudo . ./.env docker-compose exec /usr/local/bin/energi --datadir /home/nrgstaker/.energi_core attach
 sudo docker-compose up --detach
+
+curl -s https://raw.githubusercontent.com/eldaraydayev/energi3/main/build_docker.sh|sh
