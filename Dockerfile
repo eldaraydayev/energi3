@@ -1,4 +1,4 @@
-FROM energi3
+FROM linux
 RUN mkdir -p /usr/local/bin/
 ADD energi3-v3.1.3-linux-amd64/bin/energi3 /usr/local/bin/energi
 
