@@ -13,7 +13,7 @@ ENV ENERGI_CORE_DIR="${ENERGI_CORE_DIR:?}"
 ENV STAKER_HOME="${STAKER_HOME:?}"
 
 
-WORKDIR "${STAKER_HOME}/energi"
+#WORKDIR "${STAKER_HOME}/energi"
 
 RUN addgroup --gid ${USER_AND_GROUP_ID} ${USERNAME} \
   && adduser \
