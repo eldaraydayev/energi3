@@ -25,7 +25,7 @@ energi3-v3.1.3-linux-amd64.tgz: OK
 
 $ sudo apt install -y debootstrap docker-compose docker.io
 $ sudo debootstrap focal linux > /dev/null
-$ sudo tar -C linux -c . | sudo docker import - energi3
+$ sudo tar -C linux -c . | sudo docker import - linux
 
 sha256:ea13c4966dec260aa32235ffc933f1bd97102424cdb773d57bedb2960ca03a13
 
