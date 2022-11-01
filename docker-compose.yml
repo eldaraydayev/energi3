@@ -4,10 +4,10 @@ services:
   core:
     build:
       args:
-        ENERGI_BIN: "${ENERGI_BIN}"
-        ENERGI_CORE_DIR: "${ENERGI_CORE_DIR:?}"
-        ENERGI_VERSION: ${ENERGI_VERSION:?"}
-        STAKER_HOME: ${STAKER_HOME:?}
+        ENERGI_BIN: /usr/local/bin/energi
+        ENERGI_CORE_DIR: /home/nrgstaker/.energi_core
+        ENERGI_VERSION: v3.1.3
+        STAKER_HOME: /home/nrgstaker/
       context: .
     image: energi3
     ports:
@@ -15,7 +15,7 @@ services:
       - 39797:39797/udp
     restart: unless-stopped
     volumes:
-      - target: "${ENERGI_CORE_DIR}"
+      - target: /home/nrgstaker/.energi_core
         type: volume
         source: core-data
 
