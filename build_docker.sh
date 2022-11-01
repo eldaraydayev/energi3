@@ -1,20 +1,28 @@
 #!/bin/sh
 
+printf "Downloading source code ......"
 git clone https://github.com/eldaraydayev/energi3.git
-
-wget https://s3-us-west-2.amazonaws.com/download.energi.software/releases/energi3/v3.1.3/energi3-v3.1.3-linux-amd64.tgz
-wget https://s3-us-west-2.amazonaws.com/download.energi.software/releases/energi3/v3.1.3/SHA256SUMS
-
+printf "DONE\n\n"
+printf "Downloading Energi3 Tarbal file ......"
+wget -q https://s3-us-west-2.amazonaws.com/download.energi.software/releases/energi3/v3.1.3/energi3-v3.1.3-linux-amd64.tgz
+wget -q https://s3-us-west-2.amazonaws.com/download.energi.software/releases/energi3/v3.1.3/SHA256SUMS
+printf "DONE\n\n"
 echo "checking Energi3 checksum"
 sha256sum -c --ignore-missing SHA256SUMS
 
+printf "Extracting Energi3 TarBall file ......"
 tar zxvf ./energi3-v3.1.3-linux-amd64.tgz
+printf "DONE\n\n"
 
-
-echo "Installing Docker"
+printf "Installing Docker ........"
 
 sudo apt install -y debootstrap docker-compose docker.io
 sudo debootstrap focal linux > /dev/null
 sudo tar -C linux -c . | sudo docker import - linux
 sudo docker build --tag energi3 .
 sudo docker-compose up --detach
+
+printf "DONE\n\n"
+
+echo "Checking the Energi3 Node logs output"
+sudo docker logs -f -n 100 energi_core_1
