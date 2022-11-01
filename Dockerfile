@@ -31,5 +31,7 @@ COPY --chown=${USERNAME}:${USERNAME} [ "energi-core-run.sh", "./" ]
 RUN chmod +x ./energi-core-run.sh
 
 USER ${USERNAME}
+EXPOSE 39797/udp
+EXPOSE 39797/tcp
 
 ENTRYPOINT ["/bin/sh", "energi-core-run.sh"]
