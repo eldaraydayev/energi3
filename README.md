@@ -51,4 +51,4 @@ git push -u origin main
 git clone https://github.com/eldaraydayev/energi3.git
 sudo COMPOSE_PROJECT_NAME=energi ENERGI_VERSION=v3.1.3 STAKER_HOME=/home/nrgstaker ENERGI_BIN=/usr/local/bin/energi ENERGI_CORE_DIR=${STAKER_HOME}/.energi_core docker build --tag energi3 .
 sudo . ./.env docker-compose exec /usr/local/bin/energi --datadir /home/nrgstaker/.energi_core attach
-docker-compose up --detach
+sudo docker-compose up --detach
