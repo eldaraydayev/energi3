@@ -2,8 +2,6 @@ FROM linux
 RUN mkdir -p /usr/local/bin/
 ADD energi3-v3.1.3-linux-amd64/bin/energi3 /usr/local/bin/energi
 
-
-
 ARG COMPOSE_PROJECT_NAME=energi
 ARG ENERGI_VERSION=v3.1.3
 ARG STAKER_HOME=/home/nrgstaker

@@ -8,6 +8,10 @@ services:
         ENERGI_CORE_DIR: /home/nrgstaker/.energi_core
         ENERGI_VERSION: v3.1.3
         STAKER_HOME: /home/nrgstaker/
+        COMPOSE_PROJECT_NAME: energi
+        USER_AND_GROUP_ID: 1000
+        USERNAME: nrgstaker
+
       context: .
     image: energi3
     ports:
