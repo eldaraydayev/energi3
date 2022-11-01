@@ -2,9 +2,13 @@ FROM linux
 RUN mkdir -p /usr/local/bin/
 ADD energi3-v3.1.3-linux-amd64/bin/energi3 /usr/local/bin/energi
 
-ARG ENERGI_VERSION
-ARG ENERGI_BIN
-ARG ENERGI_CORE_DIR
+
+
+ARG COMPOSE_PROJECT_NAME=energi
+ARG ENERGI_VERSION=v3.1.3
+ARG STAKER_HOME=/home/nrgstaker
+ARG ENERGI_BIN=/usr/local/bin/energi
+ARG ENERGI_CORE_DIR=${STAKER_HOME}/.energi_core
 ARG USER_AND_GROUP_ID=1000
 ARG USERNAME=nrgstaker
 
