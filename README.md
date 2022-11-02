@@ -69,3 +69,16 @@ https://www.jenkins.io/doc/book/pipeline/
 
 ## 4. Script kiddies: Source or come up with a text manipulation problem and solve it with at least two of awk, sed, tr. and / or grep. Check the question below first though, maybe. [10 pts]
 
+Instruction can be find here: 
+https://blog.knoldus.com/play-with-text-in-linux-grep-cut-awk-sed/
+
+## 5. Script grown-ups: Solve the problem in question 4 using any programming language of your choice. [15 pts]
+
+Information can be find here:
+https://www.freecodecamp.org/news/python-string-manipulation-handbook/
+
+## 6. Terraform lovers: write a Terraform module that creates the following resources in IAM: - A role, with no permissions, which can be assumed by users within the same account - A policy, allowing users / entities to assume the above role - A group, with the above policy attached - A user, belonging to the above group - All four entities should have the same name, or be similarly named in some meaningful way given the context e.g. prod-ci-role, prod-ci-policy, prod-ci-group, prod-ci-user; or just prod-ci. Make the suffixes toggleable, if you wish. [20 pts]
+
+Information can be find here:
+https://gruntwork.io/repos/v0.21.4/module-security/modules/iam-policies
+https://kulasangar.medium.com/creating-and-attaching-an-aws-iam-role-with-a-policy-to-an-ec2-instance-using-terraform-scripts-aa85f3e6dfff
