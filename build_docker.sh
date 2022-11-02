@@ -1,8 +1,9 @@
 #!/bin/sh
 
-printf "Downloading source code ......"
+printf "Downloading  Source code from Github ......."
 git clone https://github.com/eldaraydayev/energi3.git
 printf "DONE\n\n"
+
 printf "Downloading Energi3 Tarbal file ......"
 wget -q https://s3-us-west-2.amazonaws.com/download.energi.software/releases/energi3/v3.1.3/energi3-v3.1.3-linux-amd64.tgz
 wget -q https://s3-us-west-2.amazonaws.com/download.energi.software/releases/energi3/v3.1.3/SHA256SUMS
@@ -19,11 +20,6 @@ printf "Installing Docker ........"
 sudo apt install -y debootstrap docker-compose docker.io
 sudo debootstrap focal linux > /dev/null
 sudo tar -C linux -c . | sudo docker import - linux
-
-printf "Downloading  Source code from Github ......."
-git clone https://github.com/eldaraydayev/energi3.git
-printf "DONE\n\n"
-
 
 
 (cd energi3; sudo docker build --tag energi3 .)
