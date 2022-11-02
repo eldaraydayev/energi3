@@ -14,6 +14,7 @@ services:
 
       context: .
     image: energi3
+    container_name: enrgi3
     ports:
       - 39797:39797/tcp
       - 39797:39797/udp
