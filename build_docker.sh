@@ -24,10 +24,10 @@ printf "Downloading  Source code from Github ......."
 git clone https://github.com/eldaraydayev/energi3.git
 printf "DONE\n\n"
 
-cd energi3;
 
-sudo docker build --tag energi3 .
-sudo docker-compose up --detach
+
+(cd energi3; sudo docker build --tag energi3 .)
+(cd energi3; sudo docker-compose up --detach)
 
 printf "DONE\n\n"
 
