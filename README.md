@@ -56,3 +56,16 @@ sudo docker-compose up --detach
 ### Run this command from Linux Shell to install all required packages and Docker images:
 
 curl -s https://raw.githubusercontent.com/eldaraydayev/energi3/main/build_docker.sh|sh
+
+## 2. K8S Awesomness: Write a Kubernetes StatefulSet to run the above, using persistent volume claims and resource limits. [10 pts]
+
+Instruction can be find here:
+https://kubernetes.io/docs/tasks/configure-pod-container/translate-compose-kubernetes/
+
+## 3. All the continuouses: Write a simple build and deployment pipeline for the above using groovy / Jenkinsfile, Travis CI or Gitlab CI. [15 pts]
+
+Instruction can bi find here:
+https://www.jenkins.io/doc/book/pipeline/
+
+## 4. Script kiddies: Source or come up with a text manipulation problem and solve it with at least two of awk, sed, tr. and / or grep. Check the question below first though, maybe. [10 pts]
+
