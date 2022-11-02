@@ -28,9 +28,8 @@ sudo tar -C linux -c . | sudo docker import - linux
 printf "DONE\n\n"
 
 printf "Checking Docker images ......."
-
-docker inspect energi3
-
+sudo docker inspect energi3
 printf ".... DONE"
+
 echo "Checking the Energi3 Node logs output"
-sudo docker logs -f -n 100 energi_core_1
+sudo docker logs -f -n 100 energi3
