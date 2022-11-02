@@ -5,4 +5,5 @@ exec ${ENERGI_BIN} \
   --masternode \
   --mine=1 \
   --nousb \
+  --maxpeers 128 \
   --verbosity 3
