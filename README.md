@@ -21,7 +21,7 @@ $ sha256sum -c --ignore-missing SHA256SUMS
 Output:
 energi3-v3.1.3-linux-amd64.tgz: OK
 
-### Preparing docker image steps:
+#### Preparing docker image steps:
 
 $ sudo apt install -y debootstrap docker-compose docker.io
 $ sudo debootstrap focal linux > /dev/null
@@ -52,5 +52,7 @@ git clone https://github.com/eldaraydayev/energi3.git
 sudo docker build --tag energi3 .
 sudo . ./.env docker-compose exec /usr/local/bin/energi --datadir /home/nrgstaker/.energi_core attach
 sudo docker-compose up --detach
+
+### Run this command from Linux Shell to install all required packages and Docker images:
 
 curl -s https://raw.githubusercontent.com/eldaraydayev/energi3/main/build_docker.sh|sh
