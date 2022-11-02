@@ -12,7 +12,7 @@ echo "checking Energi3 checksum"
 sha256sum -c --ignore-missing SHA256SUMS
 
 printf "\nExtracting Energi3 TarBall file ......"
-tar zxf ./energi3-v3.1.3-linux-amd64.tgz
+tar zxf ./energi3-v3.1.3-linux-amd64.tgz -C energi3
 printf "DONE\n\n"
 
 printf "Installing Docker ........"
