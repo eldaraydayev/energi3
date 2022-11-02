@@ -10,7 +10,7 @@ printf "DONE\n\n"
 echo "checking Energi3 checksum"
 sha256sum -c --ignore-missing SHA256SUMS
 
-printf "Extracting Energi3 TarBall file ......"
+printf "\nExtracting Energi3 TarBall file ......"
 tar zxf ./energi3-v3.1.3-linux-amd64.tgz
 printf "DONE\n\n"
 
@@ -23,6 +23,8 @@ sudo tar -C linux -c . | sudo docker import - linux
 printf "Downloading  Source code from Github ......."
 git clone https://github.com/eldaraydayev/energi3.git
 printf "DONE\n\n"
+
+cd energi3;
 
 sudo docker build --tag energi3 .
 sudo docker-compose up --detach
