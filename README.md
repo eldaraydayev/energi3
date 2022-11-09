@@ -7,6 +7,13 @@ Write a Dockerfile to run Energi v3.1.2 in a container. It should somehow verify
 https://wiki.energi.world/en/downloads/core-node
 The build should be security conscious, and ideally pass a container image security test such as ECR, or Trivy. [20 pts]
 
+### Run this command from Linux Shell to install all required packages and Docker images:
+
+curl -s https://raw.githubusercontent.com/eldaraydayev/energi3/main/build_docker.sh|sh
+
+It will execute below steps:
+
+
 $ wget https://s3-us-west-2.amazonaws.com/download.energi.software/releases/energi3/v3.1.3/energi3-v3.1.3-linux-amd64.tgz
 $ tar zxvf ./energi3-v3.1.3-linux-amd64.tgz
 $ ls -alF 
@@ -53,9 +60,7 @@ sudo docker build --tag energi3 .
 sudo . ./.env docker-compose exec /usr/local/bin/energi --datadir /home/nrgstaker/.energi_core attach
 sudo docker-compose up --detach
 
-### Run this command from Linux Shell to install all required packages and Docker images:
 
-curl -s https://raw.githubusercontent.com/eldaraydayev/energi3/main/build_docker.sh|sh
 
 ## 2. K8S Awesomness: Write a Kubernetes StatefulSet to run the above, using persistent volume claims and resource limits. [10 pts]
 
