@@ -1,4 +1,4 @@
-# DevOps Chalenge for Enegri
+# DevOps Chalenge for Energi
 
 ## 1) Docker Whale:
 
